@@ -16,12 +16,12 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
 
-	"eonyx/internal/agent"
-	"eonyx/internal/config"
-	"eonyx/internal/llm"
-	"eonyx/internal/session"
-	"eonyx/internal/skills"
-	"eonyx/internal/tools"
+	"github.com/eonyx-core/eonyx/internal/agent"
+	"github.com/eonyx-core/eonyx/internal/config"
+	"github.com/eonyx-core/eonyx/internal/llm"
+	"github.com/eonyx-core/eonyx/internal/session"
+	"github.com/eonyx-core/eonyx/internal/skills"
+	"github.com/eonyx-core/eonyx/internal/tools"
 )
 
 func newTestModel() *Model {

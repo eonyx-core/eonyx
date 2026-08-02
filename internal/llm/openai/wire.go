@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"strings"
 
-	"eonyx/internal/llm"
+	"github.com/eonyx-core/eonyx/internal/llm"
 )
 
 // Wire types for the OpenAI Chat Completions API. Only the fields eonyx

@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"testing"
 
-	"eonyx/internal/config"
-	"eonyx/internal/llm/openai"
+	"github.com/eonyx-core/eonyx/internal/config"
+	"github.com/eonyx-core/eonyx/internal/llm/openai"
 )
 
 func TestForEmptyModelIDUsesDefault(t *testing.T) {

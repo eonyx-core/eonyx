@@ -14,7 +14,7 @@ import (
 	"strconv"
 	"strings"
 
-	"eonyx/internal/hooks"
+	"github.com/eonyx-core/eonyx/internal/hooks"
 )
 
 // Config is the fully merged, environment-resolved configuration.

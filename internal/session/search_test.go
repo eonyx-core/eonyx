@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"eonyx/internal/llm"
+	"github.com/eonyx-core/eonyx/internal/llm"
 )
 
 func TestSearch(t *testing.T) {

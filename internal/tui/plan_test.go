@@ -4,9 +4,9 @@ import (
 	"errors"
 	"testing"
 
-	"eonyx/internal/agent"
-	"eonyx/internal/config"
-	"eonyx/internal/tools"
+	"github.com/eonyx-core/eonyx/internal/agent"
+	"github.com/eonyx-core/eonyx/internal/config"
+	"github.com/eonyx-core/eonyx/internal/tools"
 )
 
 func TestPlanApprovalOpensAfterPlanTurn(t *testing.T) {

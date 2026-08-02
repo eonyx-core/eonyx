@@ -5,9 +5,9 @@ import (
 
 	tea "github.com/charmbracelet/bubbletea"
 
-	"eonyx/internal/config"
-	"eonyx/internal/permission"
-	"eonyx/internal/tools"
+	"github.com/eonyx-core/eonyx/internal/config"
+	"github.com/eonyx-core/eonyx/internal/permission"
+	"github.com/eonyx-core/eonyx/internal/tools"
 )
 
 func TestAuthorizeToolStaticAllow(t *testing.T) {

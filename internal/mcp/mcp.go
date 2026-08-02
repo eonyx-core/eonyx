@@ -11,8 +11,8 @@ import (
 
 	"github.com/modelcontextprotocol/go-sdk/mcp"
 
-	"eonyx/internal/tools"
-	"eonyx/internal/version"
+	"github.com/eonyx-core/eonyx/internal/tools"
+	"github.com/eonyx-core/eonyx/internal/version"
 )
 
 // ServerConfig describes how to reach one MCP server.

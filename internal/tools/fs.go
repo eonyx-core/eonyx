@@ -9,7 +9,7 @@ import (
 	"sort"
 	"strings"
 
-	"eonyx/internal/diff"
+	"github.com/eonyx-core/eonyx/internal/diff"
 )
 
 // resolvePath resolves p against workdir. Absolute paths are used as-is.

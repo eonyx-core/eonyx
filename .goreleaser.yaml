@@ -15,7 +15,7 @@ builds:
     goos: [linux, darwin, windows]
     goarch: [amd64, arm64]
     ldflags:
-      - -s -w -X eonyx/internal/version.Version={{ .Version }}
+      - -s -w -X github.com/eonyx-core/eonyx/internal/version.Version={{ .Version }}
 
 archives:
   - id: eonyx

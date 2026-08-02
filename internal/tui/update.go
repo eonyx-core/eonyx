@@ -10,7 +10,7 @@ import (
 	"github.com/charmbracelet/bubbles/spinner"
 	tea "github.com/charmbracelet/bubbletea"
 
-	"eonyx/internal/llm"
+	"github.com/eonyx-core/eonyx/internal/llm"
 )
 
 // Update satisfies tea.Model.

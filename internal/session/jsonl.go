@@ -13,7 +13,7 @@ import (
 	"sync"
 	"time"
 
-	"eonyx/internal/llm"
+	"github.com/eonyx-core/eonyx/internal/llm"
 )
 
 // maxMessageLine bounds a single stored message line. Tool results can be large.

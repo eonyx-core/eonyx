@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"testing"
 
-	"eonyx/internal/llm"
+	"github.com/eonyx-core/eonyx/internal/llm"
 )
 
 func TestMessageRoundTrip(t *testing.T) {

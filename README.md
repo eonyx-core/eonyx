@@ -1,8 +1,8 @@
 # eonyx
 
-[![CI](https://github.com/eonyx-core/eonyx.cli/actions/workflows/ci.yml/badge.svg)](https://github.com/eonyx-core/eonyx.cli/actions/workflows/ci.yml)
-[![Release](https://img.shields.io/github/v/release/eonyx-core/eonyx.cli?sort=semver)](https://github.com/eonyx-core/eonyx.cli/releases/latest)
-[![Go](https://img.shields.io/github/go-mod/go-version/eonyx-core/eonyx.cli)](go.mod)
+[![CI](https://github.com/eonyx-core/eonyx/actions/workflows/ci.yml/badge.svg)](https://github.com/eonyx-core/eonyx/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/eonyx-core/eonyx?sort=semver)](https://github.com/eonyx-core/eonyx/releases/latest)
+[![Go](https://img.shields.io/github/go-mod/go-version/eonyx-core/eonyx)](go.mod)
 ![Platforms](https://img.shields.io/badge/platform-linux%20%7C%20macOS%20%7C%20windows-blue)
 
 A terminal-first AI coding agent written in Go. It talks directly to
@@ -75,7 +75,7 @@ an internet connection to eonyx.tech is required to launch the agent.
 With a Go toolchain you can also install from source:
 
 ```bash
-go install github.com/eonyx-core/eonyx.cli@latest
+go install github.com/eonyx-core/eonyx@latest
 ```
 
 (A `go install` build reports the version the Go toolchain embeds from VCS
@@ -85,7 +85,7 @@ A container image is published to GitHub Container Registry on each release:
 
 ```bash
 docker run --rm -it -v "$PWD:/work" \
-  -e DEEPSEEK_API_KEY ghcr.io/eonyx-core/eonyx.cli:latest run "your prompt here"
+  -e DEEPSEEK_API_KEY ghcr.io/eonyx-core/eonyx:latest run "your prompt here"
 ```
 
 ## Build

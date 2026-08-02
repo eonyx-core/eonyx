@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"time"
 
-	"eonyx/internal/shell"
+	"github.com/eonyx-core/eonyx/internal/shell"
 )
 
 const (

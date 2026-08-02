@@ -8,7 +8,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"eonyx/internal/config"
+	"github.com/eonyx-core/eonyx/internal/config"
 )
 
 func newCleanCmd() *cobra.Command {

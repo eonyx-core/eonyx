@@ -12,9 +12,9 @@ import (
 
 	tea "github.com/charmbracelet/bubbletea"
 
-	"eonyx/internal/config"
-	"eonyx/internal/llm"
-	"eonyx/internal/provider"
+	"github.com/eonyx-core/eonyx/internal/config"
+	"github.com/eonyx-core/eonyx/internal/llm"
+	"github.com/eonyx-core/eonyx/internal/provider"
 )
 
 // runSlashCommand interprets a "/command" typed in the input box instead of

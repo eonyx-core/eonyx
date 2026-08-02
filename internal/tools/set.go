@@ -3,7 +3,7 @@ package tools
 import (
 	"net/http"
 
-	"eonyx/internal/shell"
+	"github.com/eonyx-core/eonyx/internal/shell"
 )
 
 // DefaultSet builds eonyx's standard tool registry: file and search tools

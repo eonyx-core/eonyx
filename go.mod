@@ -1,4 +1,4 @@
-module eonyx
+module github.com/eonyx-core/eonyx
 
 go 1.26
 

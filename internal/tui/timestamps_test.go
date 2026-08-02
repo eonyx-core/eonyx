@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"eonyx/internal/llm"
+	"github.com/eonyx-core/eonyx/internal/llm"
 )
 
 func TestFormatDuration(t *testing.T) {

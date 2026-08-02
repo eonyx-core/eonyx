@@ -17,7 +17,7 @@ import (
 	"strings"
 	"time"
 
-	"eonyx/internal/llm"
+	"github.com/eonyx-core/eonyx/internal/llm"
 )
 
 // maxStreamLine bounds a single SSE data line. Individual completion chunks are

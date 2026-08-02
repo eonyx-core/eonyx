@@ -9,10 +9,10 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"eonyx/internal/llm"
-	"eonyx/internal/llm/openai"
-	"eonyx/internal/shell"
-	"eonyx/internal/tools"
+	"github.com/eonyx-core/eonyx/internal/llm"
+	"github.com/eonyx-core/eonyx/internal/llm/openai"
+	"github.com/eonyx-core/eonyx/internal/shell"
+	"github.com/eonyx-core/eonyx/internal/tools"
 )
 
 // TestEndToEndWritesFile drives the real OpenAI client and tool set: the model

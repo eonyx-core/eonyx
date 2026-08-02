@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
-	"eonyx/internal/llm"
-	"eonyx/internal/session"
-	"eonyx/internal/tools"
+	"github.com/eonyx-core/eonyx/internal/llm"
+	"github.com/eonyx-core/eonyx/internal/session"
+	"github.com/eonyx-core/eonyx/internal/tools"
 )
 
 // TestPersistAndResume verifies the Phase 2 contract: messages committed by the

@@ -13,9 +13,9 @@ import (
 	"sync"
 	"time"
 
-	"eonyx/internal/hooks"
-	"eonyx/internal/llm"
-	"eonyx/internal/tools"
+	"github.com/eonyx-core/eonyx/internal/hooks"
+	"github.com/eonyx-core/eonyx/internal/llm"
+	"github.com/eonyx-core/eonyx/internal/tools"
 )
 
 // ErrMaxSteps is returned (wrapped) by Send when the loop hits the tool

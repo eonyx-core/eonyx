@@ -50,5 +50,5 @@ jobs:
           build-args: |
             VERSION=${{ github.ref_name }}
           tags: |
-            ghcr.io/eonyx-core/eonyx.cli:latest
-            ghcr.io/eonyx-core/eonyx.cli:${{ steps.meta.outputs.version }}
+            ghcr.io/eonyx-core/eonyx:latest
+            ghcr.io/eonyx-core/eonyx:${{ steps.meta.outputs.version }}

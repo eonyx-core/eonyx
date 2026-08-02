@@ -16,15 +16,15 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
 
-	"eonyx/internal/agent"
-	"eonyx/internal/config"
-	"eonyx/internal/git"
-	"eonyx/internal/hooks"
-	"eonyx/internal/llm"
-	"eonyx/internal/permission"
-	"eonyx/internal/session"
-	"eonyx/internal/skills"
-	"eonyx/internal/tools"
+	"github.com/eonyx-core/eonyx/internal/agent"
+	"github.com/eonyx-core/eonyx/internal/config"
+	"github.com/eonyx-core/eonyx/internal/git"
+	"github.com/eonyx-core/eonyx/internal/hooks"
+	"github.com/eonyx-core/eonyx/internal/llm"
+	"github.com/eonyx-core/eonyx/internal/permission"
+	"github.com/eonyx-core/eonyx/internal/session"
+	"github.com/eonyx-core/eonyx/internal/skills"
+	"github.com/eonyx-core/eonyx/internal/tools"
 )
 
 // nextSessionTitle returns a sequential numeric title ("1", "2", …) for a new

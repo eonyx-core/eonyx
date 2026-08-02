@@ -9,9 +9,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"eonyx/internal/agent"
-	"eonyx/internal/llm"
-	"eonyx/internal/tools"
+	"github.com/eonyx-core/eonyx/internal/agent"
+	"github.com/eonyx-core/eonyx/internal/llm"
+	"github.com/eonyx-core/eonyx/internal/tools"
 )
 
 // taskSystemSuffix is appended to the child's system prompt so it works

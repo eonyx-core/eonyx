@@ -4,7 +4,7 @@ import (
 	"errors"
 	"testing"
 
-	"eonyx/internal/llm"
+	"github.com/eonyx-core/eonyx/internal/llm"
 )
 
 func TestFork(t *testing.T) {

@@ -7,7 +7,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"eonyx/internal/license"
+	"github.com/eonyx-core/eonyx/internal/license"
 )
 
 func newLicenseCmd() *cobra.Command {

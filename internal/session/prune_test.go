@@ -3,7 +3,7 @@ package session
 import (
 	"testing"
 
-	"eonyx/internal/llm"
+	"github.com/eonyx-core/eonyx/internal/llm"
 )
 
 func TestPruneEmpty(t *testing.T) {

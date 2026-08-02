@@ -9,9 +9,9 @@ import (
 	"net/http"
 	"time"
 
-	"eonyx/internal/config"
-	"eonyx/internal/llm"
-	"eonyx/internal/llm/openai"
+	"github.com/eonyx-core/eonyx/internal/config"
+	"github.com/eonyx-core/eonyx/internal/llm"
+	"github.com/eonyx-core/eonyx/internal/llm/openai"
 )
 
 // defaultResponseHeaderTimeout bounds the wait for the first response header

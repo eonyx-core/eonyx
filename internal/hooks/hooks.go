@@ -10,7 +10,7 @@ import (
 
 	"mvdan.cc/sh/v3/syntax"
 
-	"eonyx/internal/shell"
+	"github.com/eonyx-core/eonyx/internal/shell"
 )
 
 // Hook describes a before/after shell command for a named tool.

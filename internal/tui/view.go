@@ -13,9 +13,9 @@ import (
 	"github.com/charmbracelet/lipgloss"
 	"github.com/charmbracelet/x/ansi"
 
-	"eonyx/internal/llm"
-	"eonyx/internal/skills"
-	versionpkg "eonyx/internal/version"
+	"github.com/eonyx-core/eonyx/internal/llm"
+	"github.com/eonyx-core/eonyx/internal/skills"
+	versionpkg "github.com/eonyx-core/eonyx/internal/version"
 )
 
 // scrollbarWidth is the column reserved to the right of the viewport for the

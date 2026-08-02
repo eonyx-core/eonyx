@@ -7,7 +7,7 @@ import (
 
 	"github.com/charmbracelet/x/ansi"
 
-	"eonyx/internal/config"
+	"github.com/eonyx-core/eonyx/internal/config"
 )
 
 func TestFooterShowsTokenRate(t *testing.T) {

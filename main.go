@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"eonyx/cmd"
+	"github.com/eonyx-core/eonyx/cmd"
 )
 
 func main() {

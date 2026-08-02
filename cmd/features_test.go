@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"eonyx/internal/agent"
+	"github.com/eonyx-core/eonyx/internal/agent"
 )
 
 func TestResolvePromptFromArgs(t *testing.T) {

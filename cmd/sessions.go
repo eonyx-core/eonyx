@@ -6,8 +6,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"eonyx/internal/config"
-	"eonyx/internal/session"
+	"github.com/eonyx-core/eonyx/internal/config"
+	"github.com/eonyx-core/eonyx/internal/session"
 )
 
 func newSessionsCmd() *cobra.Command {

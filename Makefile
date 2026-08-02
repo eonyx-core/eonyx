@@ -1,4 +1,4 @@
-MODULE  := eonyx
+MODULE  := github.com/eonyx-core/eonyx
 VERSION := $(shell git describe --tags --always --dirty 2>/dev/null || echo dev)
 LDFLAGS := -s -w -X $(MODULE)/internal/version.Version=$(VERSION)
 

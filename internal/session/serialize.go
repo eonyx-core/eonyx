@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"eonyx/internal/llm"
+	"github.com/eonyx-core/eonyx/internal/llm"
 )
 
 // messageDTO is the on-disk form of an llm.Message. The content sum type

@@ -8,7 +8,7 @@ import (
 	"errors"
 	"time"
 
-	"eonyx/internal/llm"
+	"github.com/eonyx-core/eonyx/internal/llm"
 )
 
 // ErrNotFound is returned when a session id does not exist.

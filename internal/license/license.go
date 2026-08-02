@@ -24,7 +24,7 @@ import (
 	"strings"
 	"time"
 
-	"eonyx/internal/config"
+	"github.com/eonyx-core/eonyx/internal/config"
 )
 
 // pinnedSPKIBase64 is the production Ed25519 public key of the EONYX license

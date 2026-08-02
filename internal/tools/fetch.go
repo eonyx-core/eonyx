@@ -53,7 +53,7 @@ func newFetchTool(client *http.Client) Tool {
 			if err != nil {
 				return "", err
 			}
-			req.Header.Set("User-Agent", "eonyx/0.1")
+			req.Header.Set("User-Agent", "github.com/eonyx-core/eonyx/0.1")
 			req.Header.Set("Accept", "text/html,text/plain,*/*")
 
 			resp, err := client.Do(req)

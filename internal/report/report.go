@@ -13,7 +13,7 @@ import (
 
 	"github.com/jackc/pgx/v5"
 
-	"eonyx/internal/tools"
+	"github.com/eonyx-core/eonyx/internal/tools"
 )
 
 // emptySchema is the parameter schema for the report tools, which take no

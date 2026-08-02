@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"eonyx/internal/shell"
+	"github.com/eonyx-core/eonyx/internal/shell"
 )
 
 func TestHookBeforeAllowsTool(t *testing.T) {

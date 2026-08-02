@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"eonyx/internal/skills"
+	"github.com/eonyx-core/eonyx/internal/skills"
 )
 
 const baseTemplate = `You are eonyx, a terminal-based AI coding assistant working in the user's project.

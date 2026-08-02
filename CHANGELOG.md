@@ -5,13 +5,22 @@ All notable changes to eonyx are documented here. The format follows
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 Release binaries and their auto-generated notes are published on the
-[Releases page](https://github.com/eonyx-core/eonyx.cli/releases); GoReleaser
+[Releases page](https://github.com/eonyx-core/eonyx/releases); GoReleaser
 compiles the per-release notes from commit messages. This file is the
 human-curated summary.
 
 The agent was developed before this repository existed and its history begins
 here, at a single commit. 1.0.0 is therefore the first release of eonyx as it
 stands today, not the first line of code written.
+
+## [1.0.1] - 2026-08-02
+
+### Fixed
+
+- `go install` works. The module path was declared as a bare `eonyx` while the
+  README told people to install from the repository URL, and Go refuses a module
+  whose declared path does not match where it was fetched from. The module is now
+  `github.com/eonyx-core/eonyx`, matching the repository name.
 
 ## [1.0.0] - 2026-08-02
 
@@ -89,6 +98,7 @@ First release.
 
 - Cross-platform releases via GoReleaser: linux, macOS and Windows on amd64 and
   arm64, with checksums.
-- Container image published to `ghcr.io/eonyx-core/eonyx.cli`.
+- Container image published to `ghcr.io/eonyx-core/eonyx`.
 
-[1.0.0]: https://github.com/eonyx-core/eonyx.cli/releases/tag/v1.0.0
+[1.0.1]: https://github.com/eonyx-core/eonyx/releases/tag/v1.0.1
+[1.0.0]: https://github.com/eonyx-core/eonyx/releases/tag/v1.0.0

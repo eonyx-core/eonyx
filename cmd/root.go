@@ -11,11 +11,11 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"eonyx/internal/config"
-	"eonyx/internal/license"
-	"eonyx/internal/logging"
-	"eonyx/internal/tui"
-	"eonyx/internal/version"
+	"github.com/eonyx-core/eonyx/internal/config"
+	"github.com/eonyx-core/eonyx/internal/license"
+	"github.com/eonyx-core/eonyx/internal/logging"
+	"github.com/eonyx-core/eonyx/internal/tui"
+	"github.com/eonyx-core/eonyx/internal/version"
 )
 
 // logFileFlag is bound to the root's persistent --log-file flag, so both the

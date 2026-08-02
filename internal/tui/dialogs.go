@@ -8,9 +8,9 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
 
-	"eonyx/internal/llm"
-	"eonyx/internal/session"
-	"eonyx/internal/skills"
+	"github.com/eonyx-core/eonyx/internal/llm"
+	"github.com/eonyx-core/eonyx/internal/session"
+	"github.com/eonyx-core/eonyx/internal/skills"
 )
 
 func (m *Model) openModelPicker() {

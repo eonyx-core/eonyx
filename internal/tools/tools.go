@@ -10,7 +10,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"eonyx/internal/llm"
+	"github.com/eonyx-core/eonyx/internal/llm"
 )
 
 // Handler executes a tool. input is the raw JSON arguments produced by the

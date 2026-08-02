@@ -9,17 +9,17 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
 
-	"eonyx/internal/config"
-	"eonyx/internal/hooks"
-	"eonyx/internal/mcp"
-	"eonyx/internal/prompt"
-	"eonyx/internal/provider"
-	"eonyx/internal/report"
-	"eonyx/internal/session"
-	"eonyx/internal/shell"
-	"eonyx/internal/skills"
-	"eonyx/internal/subagent"
-	"eonyx/internal/tools"
+	"github.com/eonyx-core/eonyx/internal/config"
+	"github.com/eonyx-core/eonyx/internal/hooks"
+	"github.com/eonyx-core/eonyx/internal/mcp"
+	"github.com/eonyx-core/eonyx/internal/prompt"
+	"github.com/eonyx-core/eonyx/internal/provider"
+	"github.com/eonyx-core/eonyx/internal/report"
+	"github.com/eonyx-core/eonyx/internal/session"
+	"github.com/eonyx-core/eonyx/internal/shell"
+	"github.com/eonyx-core/eonyx/internal/skills"
+	"github.com/eonyx-core/eonyx/internal/subagent"
+	"github.com/eonyx-core/eonyx/internal/tools"
 )
 
 // Program is the public entry point for the interactive TUI.

@@ -8,9 +8,9 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"eonyx/internal/agent"
-	"eonyx/internal/config"
-	"eonyx/internal/skills"
+	"github.com/eonyx-core/eonyx/internal/agent"
+	"github.com/eonyx-core/eonyx/internal/config"
+	"github.com/eonyx-core/eonyx/internal/skills"
 )
 
 func newConfigCmd() *cobra.Command {

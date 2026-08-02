@@ -6,8 +6,8 @@ import (
 	"strings"
 	"testing"
 
-	"eonyx/internal/llm"
-	"eonyx/internal/tools"
+	"github.com/eonyx-core/eonyx/internal/llm"
+	"github.com/eonyx-core/eonyx/internal/tools"
 )
 
 func TestSummarizeCompactsOldHistory(t *testing.T) {

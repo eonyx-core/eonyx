@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"eonyx/internal/llm"
+	"github.com/eonyx-core/eonyx/internal/llm"
 )
 
 func collect(t *testing.T, ch <-chan llm.Event) []llm.Event {

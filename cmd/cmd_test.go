@@ -9,8 +9,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"eonyx/internal/config"
-	"eonyx/internal/session"
+	"github.com/eonyx-core/eonyx/internal/config"
+	"github.com/eonyx-core/eonyx/internal/session"
 )
 
 // execute runs cmd with the given args and captures stdout/stderr.

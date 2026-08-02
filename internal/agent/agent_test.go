@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	"eonyx/internal/llm"
-	"eonyx/internal/tools"
+	"github.com/eonyx-core/eonyx/internal/llm"
+	"github.com/eonyx-core/eonyx/internal/tools"
 )
 
 // scriptedProvider replays a fixed sequence of event batches, one per Stream call.

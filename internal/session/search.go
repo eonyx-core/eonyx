@@ -4,7 +4,7 @@ import (
 	"errors"
 	"strings"
 
-	"eonyx/internal/llm"
+	"github.com/eonyx-core/eonyx/internal/llm"
 )
 
 // SearchHit is a session that matched a query, with a short snippet showing the

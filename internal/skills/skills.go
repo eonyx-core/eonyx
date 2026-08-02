@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"eonyx/internal/tools"
+	"github.com/eonyx-core/eonyx/internal/tools"
 )
 
 // SkillMeta is the frontmatter of a SKILL.md file.
