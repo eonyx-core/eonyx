@@ -1,0 +1,72 @@
+{
+  "providers": {
+    "openai": {
+      "type": "openai",
+      "base_url": "https://api.openai.com/v1",
+      "api_key": "$OPENAI_API_KEY"
+    },
+    "openrouter": {
+      "type": "openai",
+      "base_url": "https://openrouter.ai/api/v1",
+      "api_key": "$OPENROUTER_API_KEY"
+    },
+    "deepseek": {
+      "type": "openai",
+      "base_url": "https://api.deepseek.com",
+      "api_key": "$DEEPSEEK_API_KEY"
+    },
+    "local": {
+      "type": "openai",
+      "base_url": "http://localhost:11434/v1",
+      "api_key": ""
+    }
+  },
+  "models": [
+    {"id": "deepseek-v4-flash", "provider": "deepseek", "context_window": 1000000, "input_price": 0.14, "output_price": 0.28},
+    {"id": "deepseek-v4-pro", "provider": "deepseek", "context_window": 1000000, "input_price": 0.435, "output_price": 0.87},
+    {"id": "gpt-4o", "provider": "openai", "context_window": 128000, "input_price": 2.5, "output_price": 10},
+    {"id": "qwen2.5-coder", "provider": "local", "context_window": 32768, "input_price": 0, "output_price": 0}
+  ],
+  "default_model": "qwen2.5-coder",
+  "max_steps": 50,
+  "permissions": {
+    "allowed_tools": ["write", "edit", "multi_edit", "bash", "fetch", "picker", "git_commit", "task"],
+    "sandbox": false
+  },
+  "skills": [
+    "~/.eonyx/skills",
+    "./.eonyx/skills"
+  ],
+  "mcp": [
+    {
+      "name": "filesystem",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "."]
+    },
+    {
+      "name": "remote-example",
+      "url": "https://mcp.example.com/sse",
+      "env": {"MCP_TOKEN": "$MCP_TOKEN"},
+      "headers": {"Authorization": "Bearer $MCP_TOKEN"}
+    }
+  ],
+  "hooks": {
+    "edit": {
+      "before": "echo \"editing $EONYX_INPUT\" >&2",
+      "after": "gofmt -w \"$(echo \"$EONYX_INPUT\" | jq -r .path)\""
+    },
+    "bash": {
+      "before": "echo \"running bash\" >&2"
+    }
+  },
+  "report": {
+    "database_url": "$DATABASE_URL"
+  },
+  "system_prompt": "",
+  "log_file": "",
+  "retry": {
+    "max_retries": 3,
+    "base_delay_ms": 500,
+    "response_header_timeout_sec": 60
+  }
+}

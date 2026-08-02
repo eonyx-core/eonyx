@@ -1,0 +1,32 @@
+# Build artifacts
+/eonyx
+/eonyx.exe
+/bin/
+/dist/
+*.exe
+*.test
+*.out
+
+# Scratch / data (not part of the repo)
+POINT.png
+output.txt
+output_utf8.txt
+xlsx_extracted/
+*.xlsx
+
+# Go
+/vendor/
+go.work
+go.work.sum
+
+# Local data / config
+.eonyx/
+.env
+.env.*
+!.env.example
+*.log
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
