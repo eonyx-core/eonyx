@@ -132,7 +132,7 @@ Then it publishes a release with checksums.
 
 ## 🏗️ Architecture
 
-[How EONYX works](https://eonyx.tech/blog/eonyx-architecture/) walks through the agent loop, the tool registry and the permission model.
+[How EONYX works](https://eonyx.tech/guide/eonyx-architecture/) walks through the agent loop, the tool registry and the permission model.
 
 ## 📄 Licence
 
