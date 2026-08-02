@@ -13,6 +13,18 @@ The agent was developed before this repository existed and its history begins
 here, at a single commit. 1.0.0 is therefore the first release of eonyx as it
 stands today, not the first line of code written.
 
+## [1.0.2] - 2026-08-02
+
+### Changed
+
+- Internal planning notes are no longer tracked in the repository.
+
+### Removed
+
+- 1.0.0 and 1.0.1 are withdrawn. Their tags were rewritten, so the copies
+  `proxy.golang.org` cached for those versions no longer match this repository.
+  Install 1.0.2 or later.
+
 ## [1.0.1] - 2026-08-02
 
 ### Fixed
@@ -100,5 +112,4 @@ First release.
   arm64, with checksums.
 - Container image published to `ghcr.io/eonyx-core/eonyx`.
 
-[1.0.1]: https://github.com/eonyx-core/eonyx/releases/tag/v1.0.1
-[1.0.0]: https://github.com/eonyx-core/eonyx/releases/tag/v1.0.0
+[1.0.2]: https://github.com/eonyx-core/eonyx/releases/tag/v1.0.2
