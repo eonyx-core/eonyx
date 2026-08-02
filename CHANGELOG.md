@@ -9,7 +9,7 @@ Release binaries and their auto-generated notes are published on the
 compiles the per-release changelog from commit messages. This file tracks the
 human-curated summary.
 
-## [Unreleased]
+## [1.1.0] - 2026-08-02
 
 ### Added
 
@@ -113,6 +113,8 @@ GoReleaser-driven cross-platform releases.
 
 Initial tagged pre-release.
 
-[Unreleased]: https://github.com/eonyx-core/eonyx.cli/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/eonyx-core/eonyx.cli/compare/v0.1.0...v1.0.0
-[0.1.0]: https://github.com/eonyx-core/eonyx.cli/releases/tag/v0.1.0
+[1.1.0]: https://github.com/eonyx-core/eonyx.cli/releases/tag/v1.1.0
+
+The 1.0.0 and 0.1.0 entries above are kept for the record. They predate the move
+to this repository, whose history starts at a single commit, so there are no tags
+to compare against.
