@@ -5,49 +5,34 @@
 [![Go](https://img.shields.io/github/go-mod/go-version/eonyx-core/eonyx)](go.mod)
 ![Platforms](https://img.shields.io/badge/platform-linux%20%7C%20macOS%20%7C%20windows-blue)
 
-A terminal-first AI coding agent written in Go. It talks directly to
-OpenAI-compatible model APIs — OpenAI, OpenRouter, DeepSeek, Moonshot, and local
-servers like Ollama, llama.cpp, or LM Studio — with no telemetry and no OAuth.
-By default it runs against a **local** Ollama model, so no data leaves the
-machine until you explicitly configure a cloud provider. Single process, runs
-locally; the only other network call is EONYX license activation/verification
-against eonyx.tech, which runs at every startup (internet required).
+🖥️ A terminal-first AI coding agent, written in Go.
+🔌 It talks straight to any OpenAI-compatible API.
+🏠 By default it runs a local Ollama model.
+🔒 Nothing leaves your machine until you configure a cloud provider yourself.
+📡 The only other network call is licence verification against eonyx.tech.
 
-## Features
+## ✨ Features
 
-- Interactive TUI chat with streaming, a command palette, and model/session
-  pickers.
-- Headless `run` mode for scripts and pipelines.
-- Built-in tools: read, write, edit, ls, picker, glob, grep, bash, fetch. The
-  bash tool runs in-process (via `mvdan.cc/sh/v3`), so it works on Windows
-  without a system shell.
-- A permission gate: read-only tools are always allowed; writes and commands need
-  an allowlist entry or `--yolo`.
-- Session history (JSONL) with resume, and automatic context summarization when
-  history approaches the model's context window.
-- Agent Skills (local `SKILL.md` folders) and an MCP client (stdio + http) for
-  external tools.
+- 💬 Interactive TUI with streaming, a command palette and model pickers.
+- ⚙️ Headless `run` mode for scripts and pipelines.
+- 🧰 Built-in tools: read, write, edit, ls, picker, glob, grep, bash, fetch.
+- 🪟 The bash tool runs in-process via `mvdan.cc/sh/v3`. It works on Windows without a system shell.
+- 🛡️ A permission gate. Read-only tools are always allowed. Writes and commands need an allowlist entry or `--yolo`.
+- 💾 Session history in JSONL, with resume. Context is summarised automatically as it fills up.
+- 🧩 Agent Skills from local `SKILL.md` folders.
+- 🔗 An MCP client over stdio and http.
 
-## Why eonyx?
+## 🎯 Why eonyx
 
-Compared to other terminal coding agents (aider, crush, opencode):
+- 🏠 **Local-first.** No telemetry. No OAuth. Model traffic goes only to the endpoint you configure.
+- 📦 **One static binary.** No runtime. No interpreter. No `node_modules`.
+- 🪟 **Windows-native bash.** Shell tools behave the same everywhere. No WSL needed.
+- 🔌 **Bring your own endpoint.** OpenAI, OpenRouter, DeepSeek, Moonshot. Or Ollama, llama.cpp, LM Studio — fully offline.
 
-- **Local-first, no telemetry, no OAuth.** Model traffic goes straight to the
-  endpoint you configure — a local Ollama model by default. The only other
-  network call is license activation/verification against eonyx.tech.
-- **A single static binary.** One cross-compiled Go executable per platform, no
-  runtime, interpreter, or `node_modules` to install.
-- **Windows-native bash.** The bash tool runs in-process via `mvdan.cc/sh/v3`,
-  so shell tools behave the same on Windows as on Linux and macOS without WSL or
-  a system shell.
-- **Bring your own endpoint.** Any OpenAI-compatible API works — OpenAI,
-  OpenRouter, DeepSeek, Moonshot, or a local Ollama / llama.cpp / LM Studio
-  server — so you can run fully offline against a local model.
+## 📥 Install
 
-## Install
-
-Download a prebuilt binary from [eonyx.tech](https://eonyx.tech/#downloads):
-linux (amd64), macOS (Apple Silicon / Intel), and windows (x64).
+Grab a prebuilt binary from [eonyx.tech](https://eonyx.tech/#downloads).
+Builds exist for linux, macOS and windows, on amd64 and arm64.
 
 ```bash
 # Linux / macOS
@@ -58,10 +43,27 @@ eonyx --version
 
 On Windows, download `eonyx-windows-amd64.exe` and put it on your `PATH`.
 
-## License activation
+With a Go toolchain you can install from source:
 
-Running the agent requires an activated license (one license = one machine).
-Buy a key at [eonyx.tech](https://eonyx.tech), then:
+```bash
+go install github.com/eonyx-core/eonyx@latest
+```
+
+That build reports the version the Go toolchain embeds from VCS, not a clean tag.
+See [Build](#-build) for the tag-stamped one.
+
+A container image ships with every release:
+
+```bash
+docker run --rm -it -v "$PWD:/work" \
+  -e DEEPSEEK_API_KEY ghcr.io/eonyx-core/eonyx:latest run "your prompt here"
+```
+
+## 🔑 Licence
+
+The agent needs an activated licence.
+One licence binds one machine.
+Buy a key at [eonyx.tech](https://eonyx.tech).
 
 ```bash
 eonyx license activate XXXX-XXXX-XXXX-XXXX   # bind this machine
@@ -69,40 +71,24 @@ eonyx license status                          # inspect / re-verify
 eonyx license deactivate                      # free the key for another machine
 ```
 
-Verification is signed (Ed25519, pinned server key) and runs at every startup —
-an internet connection to eonyx.tech is required to launch the agent.
+Verification is Ed25519-signed and the server key is pinned.
+It runs at every startup, so launching the agent needs a connection to eonyx.tech.
 
-With a Go toolchain you can also install from source:
+## 🔨 Build
 
-```bash
-go install github.com/eonyx-core/eonyx@latest
-```
-
-(A `go install` build reports the version the Go toolchain embeds from VCS
-rather than a clean tag; see [Build](#build) for the tag-stamped build.)
-
-A container image is published to GitHub Container Registry on each release:
-
-```bash
-docker run --rm -it -v "$PWD:/work" \
-  -e DEEPSEEK_API_KEY ghcr.io/eonyx-core/eonyx:latest run "your prompt here"
-```
-
-## Build
-
-Requires Go 1.26+.
+Requires Go 1.26 or newer.
 
 ```bash
 go build -o eonyx .   # build the binary
-go test ./...            # run the tests
-make build               # build into bin/ with the git version stamped in
+go test ./...         # run the tests
+make build            # build into bin/ with the git version stamped in
 ```
 
-`make build` injects the version from `git describe` via `-ldflags`; a plain
-`go build` falls back to the version the Go toolchain embeds from VCS. Check it
-with `eonyx --version`.
+`make build` injects the version from `git describe` through `-ldflags`.
+A plain `go build` falls back to what the Go toolchain embeds from VCS.
+Check it with `eonyx --version`.
 
-## Usage
+## ⌨️ Usage
 
 ```bash
 eonyx                                 # launch the interactive TUI (needs a terminal)
@@ -113,45 +99,41 @@ eonyx config                          # print the resolved configuration
 eonyx info                            # print config/data/project paths
 ```
 
-`run` flags: `--model/-m`, `--session/-s <id>`, `--continue/-c` (resume the most
-recent session), `--yolo` (allow all tools). Streamed text goes to stdout; tool
-activity and token/session info go to stderr.
+`run` takes `--model/-m`, `--session/-s <id>`, `--continue/-c` and `--yolo`.
+Streamed text goes to stdout.
+Tool activity and token counts go to stderr.
 
-## Configuration
+## 🧭 Configuration
 
-Configuration merges three layers (lower overrides higher): global config →
-global data → project config, found by walking up from the working directory for
-`eonyx.json` or `.eonyx.json`. Provider `api_key`/`base_url` may reference
-environment variables (e.g. `$OPENAI_API_KEY`), expanded after the merge. Run
-`eonyx info` to see where these files live on your platform.
+Three layers merge, and the lower one wins: global config, then global data, then project config.
+The project layer is found by walking up from the working directory for `eonyx.json` or `.eonyx.json`.
+Run `eonyx info` to see where those files live on your platform.
 
-Unknown or malformed config fields are a fatal error — eonyx refuses to start
-rather than run a configuration it cannot fully honor.
+`api_key` and `base_url` may reference environment variables such as `$OPENAI_API_KEY`.
+They are expanded after the merge.
 
-See [eonyx.example.json](eonyx.example.json) for a complete example
-covering every supported field (providers, models, permissions, skills, MCP
-servers, hooks, and the report database).
+An unknown or malformed field is fatal.
+eonyx refuses to start rather than run a configuration it cannot fully honour.
 
-## Releases
+[eonyx.example.json](eonyx.example.json) covers every supported field.
 
-The version is the git tag — never hardcoded. To cut a release:
+## 🚀 Releases
+
+The version is the git tag, never a hardcoded string.
 
 ```bash
-git tag -a v0.2.0 -m "Release v0.2.0"
-git push origin v0.2.0
+git tag -a v1.0.3 -m "eonyx 1.0.3"
+git push origin v1.0.3
 ```
 
-Pushing a `v*` tag triggers the GitHub Actions workflow
-([.github/workflows/release.yml](.github/workflows/release.yml)), which runs
-GoReleaser ([.goreleaser.yaml](.goreleaser.yaml)) to cross-build binaries for
-linux/darwin/windows (amd64/arm64), generate a changelog, and publish a GitHub
-Release with checksums.
+Pushing a `v*` tag triggers [release.yml](.github/workflows/release.yml).
+GoReleaser cross-builds linux, darwin and windows on amd64 and arm64, then publishes a release with checksums.
 
-## Architecture
+## 🏗️ Architecture
 
-[How EONYX works](https://eonyx.tech/blog/eonyx-architecture/) walks through
-the agent loop, the tool registry and the permission model.
+[How EONYX works](https://eonyx.tech/blog/eonyx-architecture/) walks through the agent loop, the tool registry and the permission model.
 
-## License
+## 📄 Licence
 
-Proprietary — all rights reserved. See [LICENSE](LICENSE).
+Proprietary, all rights reserved.
+See [LICENSE](LICENSE).
