@@ -5,7 +5,7 @@ All notable changes to eonyx are documented here. The format follows
 to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 Release binaries and their auto-generated notes are published on the
-[Releases page](https://github.com/avtotor/eonyx/releases); GoReleaser
+[Releases page](https://github.com/eonyx-core/eonyx.cli/releases); GoReleaser
 compiles the per-release changelog from commit messages. This file tracks the
 human-curated summary.
 
@@ -113,6 +113,6 @@ GoReleaser-driven cross-platform releases.
 
 Initial tagged pre-release.
 
-[Unreleased]: https://github.com/avtotor/eonyx/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/avtotor/eonyx/compare/v0.1.0...v1.0.0
-[0.1.0]: https://github.com/avtotor/eonyx/releases/tag/v0.1.0
+[Unreleased]: https://github.com/eonyx-core/eonyx.cli/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/eonyx-core/eonyx.cli/compare/v0.1.0...v1.0.0
+[0.1.0]: https://github.com/eonyx-core/eonyx.cli/releases/tag/v0.1.0
