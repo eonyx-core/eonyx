@@ -30,3 +30,8 @@ go.work.sum
 .DS_Store
 .idea/
 .vscode/
+
+# Agent instructions and planning notes (local only)
+CLAUDE.md
+TODO_ENG.md
+TODO_RUS.md

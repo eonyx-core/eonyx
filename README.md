@@ -147,9 +147,10 @@ GoReleaser ([.goreleaser.yaml](.goreleaser.yaml)) to cross-build binaries for
 linux/darwin/windows (amd64/arm64), generate a changelog, and publish a GitHub
 Release with checksums.
 
-## Architecture & roadmap
+## Architecture
 
-See [CLAUDE.md](CLAUDE.md) for a package-by-package architecture overview.
+[How EONYX works](https://eonyx.tech/blog/eonyx-architecture/) walks through
+the agent loop, the tool registry and the permission model.
 
 ## License
 

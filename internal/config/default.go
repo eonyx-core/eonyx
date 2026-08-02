@@ -14,7 +14,7 @@ import (
 // Every top-level key the schema supports is present so the file doubles as a
 // discoverable reference. Fields whose example values would cause startup side
 // effects (mcp servers dialed, hooks executed, a database connected) are left
-// empty; see CLAUDE.md / config.go for their structure. JSON allows no comments
+// empty; see config.go for their structure. JSON allows no comments
 // and config.go rejects unknown fields, so this template carries no annotations.
 const defaultConfigJSON = `{
   "providers": {

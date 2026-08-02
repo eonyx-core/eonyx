@@ -36,8 +36,8 @@ and Windows, plus `go test -race` and `govulncheck`.
 - Dependencies are deliberately permissive and pure-Go. Do not add vendor LLM
   SDKs or Charm-forked tooling (catwalk, fantasy, charm SDK forks). Discuss any
   new dependency in an issue first.
-- Keep [CLAUDE.md](CLAUDE.md) and the config example/docs in sync when you add
-  or change configuration fields.
+- Keep the config example and the docs in sync when you add or change
+  configuration fields.
 - The build version is the git tag; never hardcode a version string (see
   `internal/version`).
 

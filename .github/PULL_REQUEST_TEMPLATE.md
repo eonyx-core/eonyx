@@ -13,4 +13,4 @@ The motivation or the issue it addresses (link it: `Fixes #123`).
 - [ ] `go test ./...` passes
 - [ ] `gofmt -l .` is empty
 - [ ] Tests added or updated for the change
-- [ ] Docs updated (README / CLAUDE.md / config example) if behavior or config changed
+- [ ] Docs updated (README / config example) if behavior or config changed
